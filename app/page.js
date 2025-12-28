@@ -1,3 +1,5 @@
+import { Bangers } from "next/font/google";
+import { Rubik_Dirt } from "next/font/google";
 import Ballpit from "./components/Ballpit";
 import LogoLoop from "./components/LogoLoop";
 import {
@@ -6,10 +8,13 @@ import {
   SiTypescript,
   SiTailwindcss,
 } from "react-icons/si";
-import { Bangers } from "next/font/google";
-import { momoTrust } from "./fonts";
 
 const bangers = Bangers({
+  weight: "400",
+  subsets: ["latin"],
+});
+
+const rubik = Rubik_Dirt({
   weight: "400",
   subsets: ["latin"],
 });
@@ -35,13 +40,11 @@ export default function Home() {
       {/* Titre et sous-titre */}
       <div className="flex flex-col items-center gap-2 md:gap-4 max-w-3xl text-center w-full">
         <h2
-          className={`${momoTrust.className} text-xl md:text-4xl lg:text-6xl font-mono font-bold tracking-wide glow-text`}
+          className={`${rubik.className} text-xl md:text-4xl lg:text-8xl font-mono font-bold tracking-wide glow-text`}
         >
           Applications
         </h2>
-        <p
-          className={`${momoTrust.className} text-sm md:text-base lg:text-lg font-mono text-gray-400 max-w-xs md:max-w-2xl leading-relaxed`}
-        >
+        <p className="text-sm md:text-base lg:text-lg font-mono text-gray-400 max-w-xs md:max-w-2xl leading-relaxed">
           Modulaires, améliorations progressives et architecture Serverless...
         </p>
       </div>
