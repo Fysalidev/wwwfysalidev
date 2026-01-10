@@ -335,7 +335,7 @@ export const LogoLoop = memo(
             {item.node}
           </span>
         ) : (
-          /* eslint-disable-next-line @next/next/no-img-element */
+          /* eslint-disable-next-line @next/next/no-img-element -- intentional: kept a raw <img> because Next.js `Image` adds a wrapper that interferes with CSS transforms/animation and the component relies on CSS-driven sizing */
           <img
             className={cx(
               "h-[var(--logoloop-logoHeight)] w-auto block object-contain",
