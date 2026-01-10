@@ -145,7 +145,6 @@ const useAnimationLoop = (
     };
 
     rafRef.current = requestAnimationFrame(animate);
-    Ò;
     return () => {
       if (rafRef.current !== null) {
         cancelAnimationFrame(rafRef.current);
@@ -336,6 +335,7 @@ export const LogoLoop = memo(
             {item.node}
           </span>
         ) : (
+          /* eslint-disable-next-line @next/next/no-img-element */
           <img
             className={cx(
               "h-[var(--logoloop-logoHeight)] w-auto block object-contain",

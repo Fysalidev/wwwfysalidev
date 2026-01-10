@@ -1,5 +1,7 @@
 import { Bangers } from "next/font/google";
 import { Rubik_Dirt } from "next/font/google";
+import { Comfortaa } from "next/font/google";
+
 import Ballpit from "./components/Ballpit";
 import LogoLoop from "./components/LogoLoop";
 import {
@@ -16,6 +18,10 @@ const bangers = Bangers({
 
 const rubik = Rubik_Dirt({
   weight: "400",
+  subsets: ["latin"],
+});
+
+const confortaa = Comfortaa({
   subsets: ["latin"],
 });
 
@@ -39,13 +45,9 @@ export default function Home() {
     <div className="flex flex-col items-center justify-center min-h-screen gap-4 md:gap-8 px-4 bg-black text-white py-8">
       {/* Titre et sous-titre */}
       <div className="flex flex-col items-center gap-2 md:gap-4 max-w-3xl text-center w-full">
-        <h2
-          className={`${rubik.className} text-xl md:text-4xl lg:text-8xl font-mono font-bold tracking-wide glow-text`}
-        >
-          Applications
-        </h2>
-        <p className="text-sm md:text-base lg:text-lg font-mono text-gray-400 max-w-xs md:max-w-2xl leading-relaxed">
-          Modulaires, améliorations progressives et architecture Serverless...
+        <h2 className={`${rubik.className} text-6xl`}>Applications</h2>
+        <p className={`${confortaa.className} text-4xl font-bold `}>
+          Architecture Serverless.
         </p>
       </div>
 
